@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.core.pages.WebElementFacade;
 
 public class LoginPage extends PageObject {
 	
@@ -13,8 +14,10 @@ public class LoginPage extends PageObject {
 	@FindBy(xpath=("//*[@id=\"password\"]"))
 	WebElement password;
 	
-	@FindBy(xpath="//button[@class = 'UserModalstyle__RightButton-uq4a18-8 jpHvvv']")
-	WebElement btnSigin;
+	//@FindBy(xpath="//button[@class = 'UserModalstyle__RightButton-uq4a18-8 jpHvvv']")
+	//WebElement sigInButton;
+	@FindBy(xpath = "//button[text()='Đăng nhập' and starts-with(@class,'UserModalstyle')]")
+	WebElementFacade signInButton ;
 	
 	public void enter_email_or_phone(String keyword) {
 		emailOrPhone.sendKeys(keyword);
@@ -24,7 +27,7 @@ public class LoginPage extends PageObject {
 		password.sendKeys(keyword);
 	}
 	
-	public void click_sigin() {
-		btnSigin.click();
+	public void click_signin() {
+		signInButton.click();
 	}
 }

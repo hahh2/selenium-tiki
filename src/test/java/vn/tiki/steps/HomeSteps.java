@@ -11,20 +11,20 @@ public class HomeSteps {
 	}
 	
 	@Step
-	public void user_click_sigin_account() {
-		onHomePage.clickSiginAccount();
+	public void user_move_sigin_account() {
+		onHomePage.mouse_move_sigin_btn();
 	}
 	
 	@Step
 	public void user_click_button_sigin() {
-		onHomePage.clickBtnSignin();
+		onHomePage.click_btn_signin();
 	}
 	
 	@Step
 	public void user_go_to_login()
 	{
 		visit_home();
-		user_click_sigin_account();
+		user_move_sigin_account();
 		user_click_button_sigin();
 	}
 }

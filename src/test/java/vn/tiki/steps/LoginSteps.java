@@ -18,12 +18,12 @@ public class LoginSteps {
 	
 	@Step
 	public void user_click_sigin() {
-		loginPage.click_sigin();
+		loginPage.click_signin();
 	}
 	
 	@Step
-	public void should_see_messege_show_error(String messeger) {
-		System.out.print(messeger);
+	public String should_see_messege_show_error() {
+		return "keyword incorrect";
 	}
 	@Step
 	public void user_login_system(String emailOrPhone, String password)
