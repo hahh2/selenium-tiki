@@ -3,7 +3,7 @@ import net.thucydides.core.annotations.Step;
 import vn.tiki.pages.HomePage;
 public class HomeSteps {
 	
-	HomePage onHomePage;
+	public HomePage onHomePage;
 	
 	@Step
 	public void visit_home() {
@@ -26,5 +26,18 @@ public class HomeSteps {
 		visit_home();
 		user_move_sigin_account();
 		user_click_button_sigin();
+	}
+	
+	@Step
+	public void show_login_popup()
+	{
+		visit_home();
+		user_move_sigin_account();
+	}
+	
+	@Step
+	public boolean pop_up_menu_show()
+	{
+		return onHomePage.sigin_button_is_visible();
 	}
 }
