@@ -11,7 +11,7 @@ public class HomePage extends PageObject {
 	
 	@FindBy(xpath = "//span[@class = 'Userstyle__NoWrap-xrezqc-11 cotJxS']")
 	WebElement clkSiginAccount;
-	@FindBy(xpath = "//*[@id=\"__next\"]/div/header/div[3]/div/div[2]/div[2]/div/button[1]")
+	@FindBy(xpath = "//button[@class='Userstyle__UserDropDownButton-xrezqc-10 kZkOAY'][contains(text(),'ng nh')]")
 	WebElement btnSigin;
 	
 	public void clickSiginAccount() {

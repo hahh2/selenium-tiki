@@ -23,7 +23,7 @@ public class WhenLoginSystemWithInvalidData {
 	@Test
 	public void should_see_error_messege_with_invalid_data() {
 		homeSteps.user_go_to_login();
-		loginSteps.user_login_system("hoanghaiha162@gmail.com", "123456");
+		loginSteps.user_login_system("duckduckgo@gmail.com", "123456");
 		loginSteps.should_see_messege_show_error("account or password incorrect");
 			
 	}
